@@ -9,6 +9,9 @@ const App = () => {
   const [blogs, setBlogs] = useState([]);
   const rederHtml = (htmlString) => ({ __html: htmlString });
 
+
+
+
   const fetchData = () => {
     axios
       .get(`${process.env.REACT_APP_API}/blog`,)
@@ -63,6 +66,8 @@ const App = () => {
 
   return (
     <div className="container p-5">
+    <p>username : ใส่เป็นอะไรก็ได้เช่น admin , aa , bb </p>
+    <p>password : Admin432 </p>
       <NavbarComponent />
       {blogs.map((blog, index) => (
         <div
